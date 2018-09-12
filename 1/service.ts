@@ -5,6 +5,9 @@ class Service {
     }
 
     public greet(name: string): string {
+        if(!name)
+            return '';
+
         return `Hello ${name}`;
     }
 }
