@@ -67,6 +67,7 @@
         "test": {
           "builder": "@angular-builders/jest:run",
           "options": {
+            "no-cache": false
           }
         },
         "lint": {
