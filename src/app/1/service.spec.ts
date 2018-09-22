@@ -1,7 +1,4 @@
-const describe: any = null;
-const beforeEach: any = null;
-const expect: any = null;
-const test: any = null;
+import { Service } from './service';
 
 describe('Service', () => {
     let service: Service;

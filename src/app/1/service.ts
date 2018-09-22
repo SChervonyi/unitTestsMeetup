@@ -1,4 +1,7 @@
-class Service {
+import { Injectable } from "@angular/core";
+
+@Injectable()
+export class Service {
 
     public addFive(a: number): number {
         return a + 5;
