@@ -9,8 +9,8 @@ export class ServiceB {
         observer.next('World');
       });
 
-    public method(): string {
-        return Math.random().toString(36).substring(7);
+    public method(count: number): string {
+      return Math.random().toString(36).substring(count);
     }
 
     public updateUserAddress(address: string): Promise<boolean> {
