@@ -9,22 +9,22 @@ describe('Service', () => {
 
     describe('addFive', () => {
         test('Should return 12', () => {
-            const myNumber: number = 7;
+            const myNumber = 7;
 
             const result = service.addFive(myNumber);
 
-            const expectedResult: number = 12;
+            const expectedResult = 12;
             expect(result).toEqual(expectedResult);
         });
     });
 
     describe('greet', () => {
         test('Should greet Rick', () => {
-            const name: string = 'Rick';
+            const name = 'Rick';
 
             const result = service.greet(name);
 
-            const expectedResult: string = 'Hello Rick';
+            const expectedResult = 'Hello Rick';
             expect(result).toEqual(expectedResult);
         });
 

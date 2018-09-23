@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class Service {
@@ -8,8 +8,9 @@ export class Service {
     }
 
     public greet(name: string): string {
-        if(!name)
+        if (!name) {
             return '';
+        }
 
         return `Hello ${name}`;
     }
