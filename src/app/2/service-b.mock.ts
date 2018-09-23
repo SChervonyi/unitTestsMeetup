@@ -1,7 +1,7 @@
 
 import { Observable, empty } from 'rxjs';
 
-export class UserServiceMock {
+export class ServiceBMock {
     public property: any;
     public promiseProperty = Promise.resolve();
     public observableProperty = empty();
