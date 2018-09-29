@@ -1,3 +1,34 @@
+let Zone: any;
+let originalSetTimeout: any;
+
+Zone.current.fork({ name: 'new' }).run(() => {
+  setTimeout(() => {
+    console.log(Zone.current.name) // new
+  }, 100)
+  
+  Zone.current.fork({ name: 'anotherOne' }).run(() => {
+    setTimeout(() => {
+      console.log(Zone.current.name) // anotherOne
+    }, 50)
+  })
+})
+
+
+function setTimeout(callback, timeout) {
+  const currentZone = Zone.current
+
+  return originalSetTimeout(() => currentZone.run(callback), timeout)
+}
+
+Zone.current.fork({ name: 'new' }).run(() => {
+  setTimeout(() => {
+    console.log(Zone.current.name)
+  }, 100)
+})
+
+
+
+
 function round(x, dp, rm, more) {
     var xc = x.c,
       i = x.e + dp + 1;

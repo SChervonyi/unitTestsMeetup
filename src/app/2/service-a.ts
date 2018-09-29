@@ -13,3 +13,16 @@ export class ServiceA {
     }
 
 }
+
+
+Zone.current.fork({ name: 'new' }).run(() => {
+  setTimeout(() => {
+    console.log(Zone.current.name) // new
+  }, 100)
+  
+  Zone.current.fork({ name: 'anotherOne' }).run(() => {
+    setTimeout(() => {
+      console.log(Zone.current.name) // anotherOne
+    }, 50)
+  })
+})
