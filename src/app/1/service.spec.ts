@@ -22,6 +22,8 @@ describe('Service', () => {
         test('Should greet Rick', () => {
             const name = 'Rick';
 
+            // jest.spyOn(...);
+
             const result = service.greet(name);
 
             const expectedResult = 'Hello Rick';
